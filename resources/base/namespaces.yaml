@@ -1,0 +1,44 @@
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    color: blue
+  name: blue
+spec:
+  finalizers:
+  - kubernetes
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    color: green
+  name: green
+spec:
+  finalizers:
+  - kubernetes
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    color: red
+  name: red
+spec:
+  finalizers:
+  - kubernetes
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    color: yellow
+  name: yellow
+spec:
+  finalizers:
+  - kubernetes
