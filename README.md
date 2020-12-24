@@ -52,3 +52,7 @@ Execute the following command to remove the virtual machines created for the Kub
 * The number of worker nodes to provision is configured by `WORKERS` constant in `Vagrantfile`
 * You can delete individual workers, e.g. `vagrant destroy worker-2 -f`
 * Every node will have this directory mounted to `/vagrant`
+* CKA exam resource:
+  * https://github.com/walidshaari/Kubernetes-Certified-Administrator
+  * https://github.com/StenlyTU/K8s-training-official
+  * https://rx-m.com/cka-online-training/

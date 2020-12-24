@@ -18,7 +18,7 @@ MASTER_VM_CPUS = 2
 
 WORKERS = 2
 WORKER_NAME="worker-%d"
-WORKER_VM_MEMORY = 512
+WORKER_VM_MEMORY = 1024
 WORKER_VM_CPUS = 1
 
 Vagrant.configure("2") do |config|
