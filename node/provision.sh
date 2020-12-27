@@ -2,7 +2,7 @@
 
 set -eou pipefail
 
-K8S_VERSION=1.18.13-00
+K8S_VERSION=1.19.6-00
 
 __here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 

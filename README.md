@@ -3,7 +3,7 @@
 Setup and run a multi-node Kubernetes cluster locally with the following specs:
 
 * Nodes: 1 master, 2 worker (ubuntu 18.04)
-* Kubernetes 1.18.13 (to practice upgrade)
+* Kubernetes 1.19.6
 * CNI: [Calico](https://docs.projectcalico.org/getting-started/kubernetes/) v3.17
 
 Motivation: I needed a repeatable local Kubernetes environment to prepare for [CKA](https://www.cncf.io/certification/cka/) exam.
@@ -26,9 +26,9 @@ Verify the cluster (`.cache` directory will be created on the host during the pr
     kubectl get nodes --kubeconfig=.cache/k8s-config.yaml
 
     NAME       STATUS   ROLES    AGE     VERSION
-    master-0   Ready    master   4m31s   v1.18.13
-    worker-1   Ready    <none>   2m36s   v1.18.13
-    worker-2   Ready    <none>   47s     v1.18.13
+    master-0   Ready    master   4m14s   v1.19.6
+    worker-1   Ready    <none>   2m24s   v1.19.6
+    worker-2   Ready    <none>   40s     v1.19.6
 
 #### Optional:
 Deploy [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/):
@@ -52,7 +52,7 @@ Execute the following command to remove the virtual machines created for the Kub
 * The number of worker nodes to provision is configured by `WORKERS` constant in `Vagrantfile`
 * You can delete individual workers, e.g. `vagrant destroy worker-2 -f`
 * Every node will have this directory mounted to `/vagrant`
-* CKA exam resource:
+* CKA exam resources:
   * https://github.com/walidshaari/Kubernetes-Certified-Administrator
   * https://github.com/StenlyTU/K8s-training-official
   * https://rx-m.com/cka-online-training/
