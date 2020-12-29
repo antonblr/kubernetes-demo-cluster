@@ -13,6 +13,7 @@ Motivation: I needed a repeatable local Kubernetes environment to prepare for [C
 
  * **[Vagrant 2.2.9+](https://www.vagrantup.com)**
  * **[VirtualBox 6.1.2+](https://www.virtualbox.org)**
+ * **[kubectl 1.19+](https://kubernetes.io/docs/tasks/tools/install-kubectl/)** (if you want to operate the cluster from your machine)
 
 ### Installation
 
@@ -21,7 +22,7 @@ To provision the cluster run:
     vagrant up
 
 
-Verify the cluster (`.cache` directory will be created on the host during the previous step)
+Verify the cluster (`.cache` directory will be created under `kubernetes-demo-cluster/` in the previous step)
 
     kubectl get nodes --kubeconfig=.cache/k8s-config.yaml
 
@@ -31,7 +32,7 @@ Verify the cluster (`.cache` directory will be created on the host during the pr
     worker-2   Ready    <none>   40s     v1.19.6
 
 #### Optional:
-Deploy [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/):
+Deploy [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/):
 
     kubectl apply -f resources/base/nginx-ingress.yaml --kubeconfig=.cache/k8s-config.yaml
 
